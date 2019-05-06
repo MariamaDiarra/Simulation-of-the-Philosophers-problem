@@ -32,6 +32,7 @@ void prendre_fourchettes(tabin* T){
     test(T->indice);
     pthread_mutex_unlock(&mutex);
     sem_wait(&s[T->indice]);
+    pthread_mutex_lock(&mutex);
     int i=T->indice;
     switch (i) {
         case 0:T->T->f1->hide();T->T->f5->hide();T->T->p1->showFourchette(); break;
@@ -42,6 +43,7 @@ void prendre_fourchettes(tabin* T){
         default: break;
     }
     printf("philosophe %d : j'ai pris mes fourchette:\n",T->indice+1);
+    pthread_mutex_unlock(&mutex);
 }
 
 void poser_fourchettes(tabin* T){
@@ -69,9 +71,8 @@ void penser(int i){
 }
 
 void avoir_faim(tabin* T){
-    p[T->indice]=mange;
+
     printf("philosophe %d : je mange\n",T->indice+1);
-    test(T->indice);
     int i=T->indice;
     switch (i) {
         case 0:T->T->p1->hungry();break;
