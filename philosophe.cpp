@@ -12,7 +12,7 @@ Philosophe::Philosophe(int num, float angle):QGraphicsEllipseItem(0,0,0,0)
     fourchette2->setParentItem(assiette);
     hideFourchette();
     assiette->setParentItem(this);
-    assiette->setPen( QPen(Qt::blue, 2) );
+    assiette->setBrush( QBrush(Qt::blue) );
     numero=new QGraphicsTextItem();
     numero->setParentItem(this);
     numero->setPos(radAssiette/3,radAssiette/2);
@@ -20,18 +20,18 @@ Philosophe::Philosophe(int num, float angle):QGraphicsEllipseItem(0,0,0,0)
 }
 void Philosophe::showFourchette(){
     fourchette1->show();
-    assiette->setPen( QPen(Qt::green, 2) );
+    assiette->setBrush( QBrush(Qt::green) );
     fourchette2->show();
-    assiette->setPen( QPen(Qt::green, 2) );
+    assiette->setBrush( QBrush(Qt::green) );
 }
 void Philosophe::hideFourchette(){
     fourchette1->hide();
-    assiette->setPen( QPen(Qt::blue, 2) );
+    assiette->setBrush( QBrush(Qt::blue) );
     fourchette2->hide();
-    assiette->setPen( QPen(Qt::blue, 2) );
+    assiette->setBrush( QBrush(Qt::blue) );
 }
 
 void Philosophe::hungry(){
 
-    assiette->setPen( QPen(Qt::red, 2) );
+    assiette->setBrush( QBrush(Qt::red) );
 }

@@ -109,6 +109,7 @@ int main(int argc, char *argv[])
     MainWindow w;
     //w.show();
     Table* t=new Table();
+    t->setBrush( QBrush(QColor(222,184,135)) );
     tabin *philo1=new tabin;
     tabin *philo2=new tabin;
     tabin *philo3=new tabin;

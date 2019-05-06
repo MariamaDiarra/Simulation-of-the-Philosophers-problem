@@ -27,26 +27,35 @@ Table::Table():QGraphicsEllipseItem(0,0,rad,rad)
     float xfref2=rad/2-rayonf2*cos(anglef);
     float xfref1=rad/2-rayonf1*cos(anglef);
     f1->setLine(xfref1,yfref1,xfref2,yfref2);
+    f1->setPen( QPen(Qt::black, 1.5) );
+
     yfref2=yref+rayonf2*sin(3*anglef);
     yfref1=yref+rayonf1*sin(3*anglef);
     xfref2=rad/2-rayonf2*cos(3*anglef);
     xfref1=rad/2-rayonf1*cos(3*anglef);
     f2->setLine(xfref1,yfref1,xfref2,yfref2);
+    f2->setPen( QPen(Qt::black, 1.5) );
+
     yfref2=yref+rayonf2*sin(5*anglef);
     yfref1=yref+rayonf1*sin(5*anglef);
     xfref2=rad/2-rayonf2*cos(5*anglef);
     xfref1=rad/2-rayonf1*cos(5*anglef);
     f3->setLine(xfref1,yfref1,xfref2,yfref2);
+    f3->setPen( QPen(Qt::black, 1.5) );
+
     yfref2=yref+rayonf2*sin(7*anglef);
     yfref1=yref+rayonf1*sin(7*anglef);
     xfref2=rad/2-rayonf2*cos(7*anglef);
     xfref1=rad/2-rayonf1*cos(7*anglef);
     f4->setLine(xfref1,yfref1,xfref2,yfref2);
+    f4->setPen( QPen(Qt::black, 1.5) );
+
     yfref2=yref+rayonf2*sin(9*anglef);
     yfref1=yref+rayonf1*sin(9*anglef);
     xfref2=rad/2-rayonf2*cos(9*anglef);
     xfref1=rad/2-rayonf1*cos(9*anglef);
     f5->setLine(xfref1,yfref1,xfref2,yfref2);
+    f5->setPen( QPen(Qt::black, 1.5) );
 
     f1->setParentItem(this);
     f2->setParentItem(this);
